@@ -1,2 +1,2 @@
 #!/bin/bash
-for CFILE in *.c; do mv "$CFILE" "${CFILE%.c}.o"; done
+gcc -c $CFILE
