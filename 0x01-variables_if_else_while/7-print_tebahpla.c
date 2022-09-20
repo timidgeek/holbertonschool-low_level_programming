@@ -8,7 +8,7 @@ int main(void)
 {
 char soup;
 
-for (soup = 'z'; soup <= 'a'; soup++)
+for (soup = 'z'; soup >= 'a'; soup--)
 	putchar(soup);
 
 putchar('\n');
