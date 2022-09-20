@@ -6,10 +6,11 @@
 */
 int main(void)
 {
+int ween;
 char teen;
 
-for (teen = 0; teen < 10; teen++)
-	putchar(teen);
+for (ween = 0; ween < 10; ween++)
+	putchar(ween);
 for (teen = 'a'; teen <= 'f'; teen++)
 	putchar(teen);
 putchar('\n');
