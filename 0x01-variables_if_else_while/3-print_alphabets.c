@@ -10,12 +10,12 @@ int main(void)
 char soup;
 
 for (soup = 'a'; soup <= 'z'; soup++)
-{
 	putchar(soup);
-	for (soup = 'A'; soup <= 'Z'; soup++)
+
+for (soup = 'A'; soup <= 'Z'; soup++)
 	putchar(soup);
 
 putchar('\n');
-}
+
 return (0);
 }
