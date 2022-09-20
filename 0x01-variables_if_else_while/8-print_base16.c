@@ -10,7 +10,7 @@ int ween;
 char teen;
 
 for (ween = 0; ween < 10; ween++)
-	putchar(ween);
+	putchar((ween % 10) + '0');
 for (teen = 'a'; teen <= 'f'; teen++)
 	putchar(teen);
 putchar('\n');
