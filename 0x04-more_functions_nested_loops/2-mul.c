@@ -6,11 +6,10 @@
  * @a: variable to be multiplied
  * @b: variable to be mutiplied
  *
- * Return: 0
+ * Return: product of two integers
 */
 
 int mul(int a, int b)
 {
-	putchar(a * b);
-	return (0);
+	return (a * b);
 }
