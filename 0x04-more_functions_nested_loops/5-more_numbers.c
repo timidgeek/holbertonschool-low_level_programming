@@ -3,7 +3,7 @@
 /**
  * more_numbers - print a series of numbers ten times
  *
- * Return: 0
+ * Return: a number
 */
 
 void more_numbers(void)
