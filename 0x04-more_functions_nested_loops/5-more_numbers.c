@@ -2,8 +2,6 @@
 
 /**
  * more_numbers - print a series of numbers ten times
- *
- * Return: a number
 */
 
 void more_numbers(void)
@@ -15,8 +13,8 @@ void more_numbers(void)
         	for (num = 0; num <= 14; num++)
         	{
 			if (num > 9)
-				putchar((num / 10) + '0');
-			putchar((num % 10) + '0');
+				putchar('1');
+			putchar('0' + (num % 10));
 		}
 		putchar('\n');
 	}
