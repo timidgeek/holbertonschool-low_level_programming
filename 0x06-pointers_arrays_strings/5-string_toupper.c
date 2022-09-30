@@ -2,7 +2,7 @@
 
 /**
 * string_toupper - changes all lowercase letters to uppercase letters
-* @*: character
+* @str: character
 * Return: string in lowercase
 */
 char *string_toupper(char *str)
@@ -12,7 +12,7 @@ char *string_toupper(char *str)
 /* iterate loop until end of the string */
 	while (str[i] != '\0')
 	{
-/* if character is in lowercase, change to uppercase by subtracting 32, in reference to the ASCII table */
+/* if char is lower, change to upper by subtract 32, per ASCII table */
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] - 32;
