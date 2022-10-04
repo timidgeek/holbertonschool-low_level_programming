@@ -10,7 +10,8 @@ char *cap_string(char *str)
 	int i;
 	int v;
 	int cap = 32;
-	int separators[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
+	int separators[] = {',', ';', '.', '!', '?', '"',
+		'(', ')', '{', '}', '\n', '\t', ' '};
 
 	/* capitalize first char of words */
 	for (i = 0; str[i] != '\0'; i++)
