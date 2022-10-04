@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		if (_strchr(accept, *s))
 		{
-			return (s);
+			return ((char *) s);
 		}
 		else
 		{
