@@ -8,33 +8,26 @@
 char *cap_string(char *str)
 {
 	int i;
+	int v;
+	int cap = 32;
+	int separators[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
 
-/* capitalize first char of words */
+	/* capitalize first char of words */
 	for (i = 0; str[i] != '\0'; i++)
 	{
-/* check if first char lowercase */
-		if (i == 0)
+		/* check if first char lowercase */
+		if ((str[i] >= 'a' && str[i] <= 'z'))
 		{
-			if ((str[i] >= 'a' && str[i] <= 'z'))
-				str[i] = str[i] - 32; /*subtract to make capital */
-		continue; /* continue to loop */
+			str[i] = str[i] - cap;
 		}
-		if (str[i] == ' ') /* check space */
+		cap = 0;
+		for (v = 0; v <= 12; v++)
 		{
-/* if space found, check next character */
-			++i;
-/* check next char is lowercase */
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (str[i] == separators[v]) /* check separation */
 			{
-				str[i] = str[i] - 32;
-				continue;
+				v = 12;
+				cap = 32;
 			}
-		}
-		else
-		{
-/* all other uppercase letters should be lowercase */
-			if (str[i] >= 'A' && str[i] <= 'Z')
-				str[i] = str[i] + 32;
 		}
 	}
 	return (str);
