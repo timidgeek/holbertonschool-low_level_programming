@@ -4,8 +4,8 @@
 
 /**
 * main - prints all arguments it recieves
-* argc: integer / amt of arguments
-* argv: argumenter
+* @argc: integer / amt of arguments
+* @argv: argumenter
 * Return: 0
 */
 int main(int argc, char *argv[])
