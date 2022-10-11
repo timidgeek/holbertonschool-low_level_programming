@@ -8,9 +8,11 @@
 * @argv: array of strings
 * Return: 0
 */
-int main(int argc, char *argv[] __attribute__((unused)))
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc);
+	int x = atoi(*argv);
 
+	if (x >= 0)
+		printf("%d\n", argc - 1);
 	return (0);
 }
