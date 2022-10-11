@@ -10,13 +10,13 @@
 int main(int argc, char *argv[])
 {
 	int y, x;
-	
+
 	if (argc > 2)
 	{
 		y = atoi(argv[1]);
 		x = atoi(argv[2]);
 
-		printf("%d\n", y*x);
+		printf("%d\n", y * x);
 	}
 	else
 	{
