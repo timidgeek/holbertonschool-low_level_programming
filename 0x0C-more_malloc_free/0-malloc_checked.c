@@ -8,7 +8,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
-	ptr = malloc(sizeof(b)); /* allocating memory for int  */
+	ptr = malloc(b); /* allocating memory for int  */
 	if (ptr == NULL) /* memory allocation failure */
 		exit(98);
 	return (ptr);
