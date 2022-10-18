@@ -11,7 +11,6 @@ void *malloc_checked(unsigned int b)
 	ptr = malloc(sizeof(b)); /* allocating memory for int  */
 	if (ptr == NULL) /* memory allocation failure */
 		exit(98);
-	else
-		return (ptr);
+	return (ptr);
 	/* do we need to free the memory? */
 }
