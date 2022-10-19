@@ -17,9 +17,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	check = malloc(5);
 	if (s1 == NULL)
-		i = 0;
+		s1 = "";
 	if (s2 == NULL)
-		x = 0;
+		s2 = "";
 	if (n >= len2) /* first n bytes of len2  */
 		n = len2;
 	if (n <= len2)
