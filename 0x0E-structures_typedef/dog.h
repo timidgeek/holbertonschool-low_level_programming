@@ -25,7 +25,6 @@ struct dog
 /**
 * dog_t - nickname for struct dog
 */
-
 typedef struct dog dog_t;
 
 /* prototypes */
