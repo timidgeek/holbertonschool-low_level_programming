@@ -9,43 +9,37 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_name;
-	char *copy_name, *copy_owner;
-	unsigned int x, name_len = 0, owner_len = 0;
+	dog_t *new_dog;
 
-	new_name = malloc(sizeof(dog_t));
-	/*holding space for new var*/
-	if (new_name == NULL)
-		return (NULL);
 	if (name == NULL || age < 0 || owner == NULL)
 	{
-		free(new_name);
 		return (NULL);
-	} /*if no input given, return null*/
+	}
 
-	for (x = 0; name[x] != '\0'; x++)
-		name_len++;
-	/*find length of name*/
-	for (x = 0; owner[x] != '\0'; x++)
-		owner_len++;
-	/*find length of owner name*/
-	copy_name = malloc(sizeof(char) * (name_len + 1));
-	if (copy_name == NULL)
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
+	{
 		return (NULL);
-	/*store a copy of name*/
-	copy_owner = malloc(sizeof(char) * (owner_len + 1));
-	if (copy_owner == NULL)
+	}
+
+	new_dog->name = malloc(sizeof(char) * (strlen(name) + 1));
+	if (new_dog->name == NULL)
+	{
+		free(new_dog);
 		return (NULL);
-	/*store a copy of owner name*/
-	for (x = 0; x <= name_len; x++)
-		copy_name[x] = name[x];
+	}
 
-	for (x = 0; x <= owner_len; x++)
-		copy_owner[x] = owner[x];
+	new_dog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
+	if (new_dog->owner == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog);
+		return (NULL);
+	}
 
-	new_name->name = copy_name;
-	new_name->owner = copy_owner;
-	new_name->age = age;
-	return (new_name);
-	/*initializing struct func*/
+	new_dog->name = strcpy(new_dog->name, name);
+	new_dog->age = age;
+	new_dog->owner = strcpy(new_dog->owner, owner);
+
+	return (new_dog);
 }
